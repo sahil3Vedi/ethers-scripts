@@ -32,6 +32,6 @@ exports.getTransactions = async(contract_type,provider,address,event_name,event_
         const txn = await provider.getTransaction(transactionHash)
         txns.push(txn)
     }
-    console.info(`${txns.length} txns found between blocks ${from_block} - ${to_block} on ${contract_type} contract ${address}`)
+    console.info(`${txns.length} txns found with name ${event_name} & topic ${event_topic} between blocks ${from_block} - ${to_block} on ${contract_type} contract ${address}`)
     return txns
 }
